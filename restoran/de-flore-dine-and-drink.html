@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>de flore, Dine & Drink | Restoran Keluarga Mewah di Bogor</title>
+    <meta name="description" content="de flore, Dine & Drink - Restoran keluarga dengan suasana mewah ala istana Eropa di Bogor. Rating 4.8 dari 1.918 ulasan Google.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { DEFAULT: '#C9A84C', light: '#e6c364', glow: '#ffe08f' },
+                        surface: { DEFAULT: '#111125', low: '#1a1a2e', mid: '#1e1e32', high: '#28283d', bright: '#37374d' },
+                        onSurface: '#e2e0fc',
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #111125; color: #e2e0fc; }
+        .font-display { font-family: 'Playfair Display', serif; }
+        .gold-gradient { background: linear-gradient(135deg, #ffe08f 0%, #C9A84C 100%); }
+        .gold-text-gradient { background: linear-gradient(135deg, #ffe08f, #e6c364); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass { background: rgba(55,55,77,0.5); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+        .star { color: #e6c364; }
+        @keyframes fadeInUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+        .animate-in { animation: fadeInUp 0.8s ease-out forwards; }
+        .hero-overlay { background: linear-gradient(180deg, rgba(17,17,37,0.3) 0%, rgba(17,17,37,0.85) 70%, #111125 100%); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <a href="#" class="font-display text-xl md:text-2xl font-bold text-gold-light tracking-wide">de flore</a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#tentang" class="text-sm text-onSurface/70 hover:text-gold-light transition">Tentang</a>
+                    <a href="#testimoni" class="text-sm text-onSurface/70 hover:text-gold-light transition">Testimoni</a>
+                    <a href="#lokasi" class="text-sm text-onSurface/70 hover:text-gold-light transition">Lokasi</a>
+                    <a href="https://wa.me/6287788773338" target="_blank" class="gold-gradient text-surface font-semibold text-sm px-5 py-2.5 rounded transition hover:opacity-90">Reservasi</a>
+                </div>
+                <a href="https://wa.me/6287788773338" target="_blank" class="md:hidden gold-gradient text-surface font-semibold text-xs px-4 py-2 rounded">Reservasi</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80" alt="Suasana mewah de flore" class="w-full h-full object-cover">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
+            <p class="text-gold-light uppercase tracking-[0.3em] text-xs md:text-sm mb-4 font-body">Dine & Drink • Bogor</p>
+            <h1 class="font-display text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-6">
+                <span class="gold-text-gradient">de flore</span>
+            </h1>
+            <p class="text-lg md:text-xl text-onSurface/80 max-w-2xl mx-auto mb-4 font-light">Pengalaman kuliner mewah dengan suasana ala istana Eropa, di jantung Kota Bogor.</p>
+            <div class="flex items-center justify-center gap-1 mb-8">
+                <span class="star text-xl">★★★★★</span>
+                <span class="text-gold-light font-semibold ml-2">4.8</span>
+                <span class="text-onSurface/50 text-sm ml-1">dari 1.918 ulasan</span>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/6287788773338" target="_blank" class="gold-gradient text-surface font-semibold px-8 py-3.5 rounded text-sm tracking-wide hover:opacity-90 transition">Hubungi Kami via WhatsApp</a>
+                <a href="#lokasi" class="border border-gold/30 text-gold-light px-8 py-3.5 rounded text-sm tracking-wide hover:bg-gold/10 transition">Lihat Lokasi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG KAMI -->
+    <section id="tentang" class="py-20 md:py-28 bg-surface-low">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <p class="text-gold-light uppercase tracking-[0.2em] text-xs mb-3">Tentang Kami</p>
+                <h2 class="font-display text-3xl md:text-5xl font-bold mb-6">Perpaduan <span class="gold-text-gradient">Cita Rasa</span> & Suasana</h2>
+                <p class="text-onSurface/70 text-lg leading-relaxed">
+                    de flore, Dine & Drink menghadirkan pengalaman bersantap istimewa dengan interior mewah nan instagramable
+                    di dua lantai — area indoor non-smoking dan outdoor smoking dengan kolam air mancur yang menenangkan.
+                    Setiap sudut dirancang untuk memberikan suasana syahdu, sempurna untuk momen keluarga maupun pertemuan spesial.
+                </p>
+            </div>
+
+            <!-- Feature Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-surface-mid rounded-lg p-8 text-center hover:bg-surface-high transition duration-300">
+                    <div class="text-4xl mb-4">🍽️</div>
+                    <h3 class="font-display text-xl font-bold text-onSurface mb-3">Kuliner Pilihan</h3>
+                    <p class="text-onSurface/60 text-sm leading-relaxed">Menu beragam dari hidangan lokal hingga internasional, disiapkan dengan bahan-bahan terbaik oleh chef berpengalaman.</p>
+                </div>
+                <div class="bg-surface-mid rounded-lg p-8 text-center hover:bg-surface-high transition duration-300">
+                    <div class="text-4xl mb-4">✨</div>
+                    <h3 class="font-display text-xl font-bold text-onSurface mb-3">Suasana Elegan</h3>
+                    <p class="text-onSurface/60 text-sm leading-relaxed">Interior mewah ala istana Eropa dengan chandelier, dekorasi emas, dan setiap sudut yang aesthetic dan instagramable.</p>
+                </div>
+                <div class="bg-surface-mid rounded-lg p-8 text-center hover:bg-surface-high transition duration-300">
+                    <div class="text-4xl mb-4">💎</div>
+                    <h3 class="font-display text-xl font-bold text-onSurface mb-3">Pelayanan Terbaik</h3>
+                    <p class="text-onSurface/60 text-sm leading-relaxed">Tim kami siap melayani dengan ramah dan profesional untuk memastikan pengalaman bersantap terbaik Anda.</p>
+                </div>
+            </div>
+
+            <!-- Trust Stats -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto">
+                <div class="bg-surface-mid rounded-lg p-6 text-center hover:bg-surface-high transition duration-300">
+                    <div class="text-3xl md:text-4xl font-display font-bold gold-text-gradient mb-1">4.8/5</div>
+                    <p class="text-onSurface/60 text-sm">Rating Google</p>
+                </div>
+                <div class="bg-surface-mid rounded-lg p-6 text-center hover:bg-surface-high transition duration-300">
+                    <div class="text-3xl md:text-4xl font-display font-bold gold-text-gradient mb-1">1.918+</div>
+                    <p class="text-onSurface/60 text-sm">Ulasan Pengunjung</p>
+                </div>
+                <div class="bg-surface-mid rounded-lg p-6 text-center hover:bg-surface-high transition duration-300">
+                    <div class="text-3xl md:text-4xl font-display font-bold gold-text-gradient mb-1">7 Hari</div>
+                    <p class="text-onSurface/60 text-sm">Buka Setiap Hari</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONI -->
+    <section id="testimoni" class="py-20 md:py-28 bg-surface">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <p class="text-gold-light uppercase tracking-[0.2em] text-xs mb-3">Apa Kata Mereka</p>
+                <h2 class="font-display text-3xl md:text-5xl font-bold">Ulasan <span class="gold-text-gradient">Tamu Kami</span></h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Review 1 -->
+                <div class="bg-surface-low rounded-lg p-6 md:p-8 flex flex-col hover:bg-surface-mid transition duration-300">
+                    <div class="flex items-center gap-0.5 mb-4"><span class="star text-sm">★★★★★</span></div>
+                    <p class="text-onSurface/80 text-sm leading-relaxed flex-1 mb-6">"Makanannya enak, tapi ada yang udah ga hangat. Tempatnya bagus banget tiap sudutnya aesthetic sekaliyyy!! Pelayanan juga ramah. Bisa reservasi. Suka banget sama tiramisunya🫶🏻"</p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                        <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold-light font-semibold text-sm">K</div>
+                        <div>
+                            <p class="text-onSurface font-medium text-sm">Kes</p>
+                            <p class="text-onSurface/40 text-xs">Google Review</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="bg-surface-low rounded-lg p-6 md:p-8 flex flex-col hover:bg-surface-mid transition duration-300">
+                    <div class="flex items-center gap-0.5 mb-4"><span class="star text-sm">★★★★★</span></div>
+                    <p class="text-onSurface/80 text-sm leading-relaxed flex-1 mb-6">"Vibes nya mewah bener ala ala istana di eropa ala versace gold gitu ada chandeliernya juga pokonya semeng deh fotogenic banget ni tempat, bersih wangi.."</p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                        <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold-light font-semibold text-sm">D</div>
+                        <div>
+                            <p class="text-onSurface font-medium text-sm">Dini Probojati</p>
+                            <p class="text-onSurface/40 text-xs">Google Review</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="bg-surface-low rounded-lg p-6 md:p-8 flex flex-col hover:bg-surface-mid transition duration-300">
+                    <div class="flex items-center gap-0.5 mb-4"><span class="star text-sm">★★★★★</span></div>
+                    <p class="text-onSurface/80 text-sm leading-relaxed flex-1 mb-6">"Nyoba cafe yg lokasinya gak jauh dari santika bogor. Untuk tempatnya mewah. Ada dua lantai indoor (non smoking) dan ada area smoking (outdoor). Area outdoor ada kolam kecil dengan air mancur yg bikin suasana makin syahdu. Toiletnya bersih dan mewah. Pelayanannya top."</p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                        <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold-light font-semibold text-sm">E</div>
+                        <div>
+                            <p class="text-onSurface font-medium text-sm">Eti Purnamawati</p>
+                            <p class="text-onSurface/40 text-xs">Google Review</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOKASI & KONTAK -->
+    <section id="lokasi" class="py-20 md:py-28 bg-surface-low">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <p class="text-gold-light uppercase tracking-[0.2em] text-xs mb-3">Kunjungi Kami</p>
+                <h2 class="font-display text-3xl md:text-5xl font-bold">Lokasi & <span class="gold-text-gradient">Jam Operasional</span></h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                <div class="space-y-8">
+                    <!-- Alamat -->
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-5 h-5 text-gold-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-onSurface font-medium mb-1">Alamat</p>
+                            <p class="text-onSurface/60 text-sm leading-relaxed">Jl. Pajajaran Indah V No.17, RT.01/RW.11, Baranangsiang, Kec. Bogor Tim., Kota Bogor, Jawa Barat 16143</p>
+                        </div>
+                    </div>
+                    <!-- Telepon -->
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-5 h-5 text-gold-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-onSurface font-medium mb-1">Telepon / WhatsApp</p>
+                            <a href="https://wa.me/6287788773338" class="text-gold-light text-sm hover:underline">0877-8877-3338</a>
+                        </div>
+                    </div>
+                    <!-- Jam -->
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-5 h-5 text-gold-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-onSurface font-medium mb-1">Jam Operasional</p>
+                            <p class="text-onSurface/60 text-sm">Senin – Minggu: <span class="text-gold-light font-medium">09.00 – 22.00</span></p>
+                            <p class="text-green-400 text-xs mt-1">● Buka Setiap Hari</p>
+                        </div>
+                    </div>
+                    <!-- CTA -->
+                    <a href="https://maps.app.goo.gl/fETMtdYFCZYxryeS7" target="_blank" class="inline-flex items-center gap-2 gold-gradient text-surface font-semibold px-6 py-3 rounded text-sm hover:opacity-90 transition">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        Buka di Google Maps
+                    </a>
+                </div>
+                <!-- Maps Embed -->
+                <div class="rounded-lg overflow-hidden h-72 md:h-full min-h-[300px]">
+                    <iframe title="Lokasi de flore, Dine & Drink di Google Maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15853.021402289258!2d106.8036245!3d-6.6151642!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5003cae807f%3A0x1d747258b3d138a!2sde%20flore%2C%20Dine%20%26%20Drink!5e0!3m2!1sid!2sid!4v1774633985026!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-10 bg-surface border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <p class="font-display text-gold-light text-lg mb-2">de flore, Dine & Drink</p>
+            <p class="text-onSurface/40 text-xs mb-4">© 2025 de flore, Dine & Drink. All rights reserved.</p>
+            <p class="text-onSurface/30 text-xs">Website Demo oleh <span class="text-gold-light/60">Digitalin</span> — Pembuatan Website Profesional</p>
+        </div>
+    </footer>
+
+</body>
+</html>
