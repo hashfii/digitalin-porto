@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AN Petshop - Sahabat Terpercaya untuk Hewan Kesayangan Anda | Bogor</title>
+    <meta name="description"
+        content="AN Petshop Bogor - Pet shop terlengkap dengan rating 4.5 bintang. Menyediakan makanan, aksesoris, dan pet hotel. Buka setiap hari 08.00-22.00.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00595c',
+                        'primary-container': '#0d7377',
+                        secondary: '#835500',
+                        'secondary-container': '#feae2c',
+                        'secondary-fixed': '#ffddb4',
+                        surface: '#fff8f1',
+                        'surface-container': '#f4ede5',
+                        'surface-container-high': '#eee7df',
+                        'surface-container-lowest': '#ffffff',
+                        'on-surface': '#1e1b17',
+                        'on-surface-variant': '#3e4949',
+                        'outline-variant': '#bec9c9',
+                        accent: '#F5A623',
+                    },
+                    fontFamily: {
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                        body: ['Manrope', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            color: #1e1b17;
+            background: #fff8f1;
+        }
+
+        .font-heading {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .gradient-primary {
+            background: linear-gradient(135deg, #00595c, #0d7377);
+        }
+
+        .gradient-hero {
+            background: linear-gradient(135deg, #00595c 0%, #0d7377 50%, #005a53 100%);
+        }
+
+        .glass-nav {
+            background: rgba(255, 248, 241, 0.85);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+
+        .paw-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg)
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(10deg)
+            }
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(30, 27, 23, 0.08);
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .star-gold {
+            color: #F5A623;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00595c, #0d7377);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(13, 115, 119, 0.35);
+        }
+
+        .btn-accent {
+            background: #F5A623;
+            color: #291800;
+            transition: all 0.3s ease;
+        }
+
+        .btn-accent:hover {
+            background: #e6951a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(245, 166, 35, 0.35);
+        }
+
+        .hero-img {
+            background: linear-gradient(135deg, #0d737744, #00595c22), url('https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="glass-nav fixed top-0 w-full z-50 border-b border-outline-variant/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <a href="#" class="flex items-center gap-2">
+                    <span class="text-2xl">🐾</span>
+                    <span class="font-heading font-bold text-xl text-primary">AN Petshop</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#beranda"
+                        class="font-body text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Beranda</a>
+                    <a href="#layanan"
+                        class="font-body text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Layanan</a>
+                    <a href="#testimoni"
+                        class="font-body text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Testimoni</a>
+                    <a href="#kontak"
+                        class="font-body text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Kontak</a>
+                </div>
+                <a href="https://wa.me/6289622026777" target="_blank"
+                    class="btn-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold font-body inline-flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.594-.818-6.34-2.192l-.442-.362-3.086 1.034 1.034-3.086-.362-.442A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+                    </svg>
+                    Hubungi Kami
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 bg-surface"></div>
+        <div class="absolute top-20 right-10 text-6xl opacity-10 paw-float select-none">🐾</div>
+        <div class="absolute bottom-20 left-10 text-4xl opacity-10 paw-float select-none" style="animation-delay:-2s">🐾
+        </div>
+        <div class="absolute top-1/2 right-1/3 text-3xl opacity-5 paw-float select-none" style="animation-delay:-4s">🐾
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="fade-up">
+                    <span
+                        class="inline-flex items-center gap-2 bg-secondary-fixed text-secondary px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-6">
+                        <span>⭐</span> Rating 4.5 di Google Maps
+                    </span>
+                    <h1
+                        class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-on-surface leading-tight tracking-tight mb-6">
+                        Sahabat <span class="text-primary-container">Terpercaya</span> untuk Hewan Kesayangan Anda
+                    </h1>
+                    <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-8 max-w-lg">
+                        AN Petshop menyediakan kebutuhan lengkap hewan peliharaan Anda — dari makanan berkualitas,
+                        aksesoris, hingga layanan pet hotel terpercaya di Bogor.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#kontak"
+                            class="btn-primary text-white px-8 py-4 rounded-full text-base font-semibold font-body text-center inline-flex items-center justify-center gap-2">
+                            🐾 Kunjungi Kami Sekarang
+                        </a>
+                        <a href="#testimoni"
+                            class="bg-surface-container-high text-primary px-8 py-4 rounded-full text-base font-semibold font-body text-center hover:bg-surface-container transition-colors">
+                            Lihat Testimoni
+                        </a>
+                    </div>
+                </div>
+                <div class="fade-up relative">
+                    <div class="hero-img rounded-3xl aspect-[4/3] shadow-2xl"></div>
+                    <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-lg flex items-center gap-3">
+                        <div
+                            class="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center text-white text-xl">
+                            🏪</div>
+                        <div>
+                            <p class="font-heading font-bold text-sm text-on-surface">Buka Setiap Hari</p>
+                            <p class="font-body text-xs text-on-surface-variant">08.00 - 22.00 WIB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section id="layanan" class="py-20 md:py-28 bg-surface-container">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <span
+                    class="inline-block bg-secondary-fixed text-secondary px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-4">Mengapa
+                    Memilih Kami</span>
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-on-surface">Dipercaya oleh <span
+                        class="text-primary-container">Pecinta Hewan</span> Bogor</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
+                <!-- Google Rating Card -->
+                <div
+                    class="bg-surface-container-lowest rounded-3xl p-8 text-center card-hover col-span-1 sm:col-span-2 lg:col-span-1">
+                    <div class="w-16 h-16 mx-auto mb-4 gradient-primary rounded-2xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z" />
+                            <path
+                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                            <path
+                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                            <path
+                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                        </svg>
+                    </div>
+                    <div class="flex items-center justify-center gap-1 mb-1">
+                        <span class="font-heading font-extrabold text-4xl text-on-surface">4.5</span>
+                        <span class="star-gold text-2xl">★</span>
+                    </div>
+                    <p class="font-body text-sm text-on-surface-variant font-medium">84 Ulasan Google</p>
+                </div>
+                <!-- Trust Badge 1 -->
+                <div class="bg-surface-container-lowest rounded-3xl p-8 text-center card-hover">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 bg-secondary-fixed rounded-2xl flex items-center justify-center text-3xl">
+                        🕐</div>
+                    <h3 class="font-heading font-bold text-lg text-on-surface mb-2">Buka Setiap Hari</h3>
+                    <p class="font-body text-sm text-on-surface-variant">Senin - Minggu, 08.00 - 22.00 WIB. Hari libur
+                        tetap buka!</p>
+                </div>
+                <!-- Trust Badge 2 -->
+                <div class="bg-surface-container-lowest rounded-3xl p-8 text-center card-hover">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 bg-secondary-fixed rounded-2xl flex items-center justify-center text-3xl">
+                        🛒</div>
+                    <h3 class="font-heading font-bold text-lg text-on-surface mb-2">Produk Lengkap</h3>
+                    <p class="font-body text-sm text-on-surface-variant">Makanan, aksesoris, obat-obatan, dan
+                        perlengkapan hewan terlengkap.</p>
+                </div>
+                <!-- Trust Badge 3 -->
+                <div class="bg-surface-container-lowest rounded-3xl p-8 text-center card-hover">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 bg-secondary-fixed rounded-2xl flex items-center justify-center text-3xl">
+                        🏨</div>
+                    <h3 class="font-heading font-bold text-lg text-on-surface mb-2">Pet Hotel</h3>
+                    <p class="font-body text-sm text-on-surface-variant">Layanan penitipan hewan dengan fasilitas nyaman
+                        dan aman.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimoni" class="py-20 md:py-28 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <span
+                    class="inline-block bg-secondary-fixed text-secondary px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-4">Testimoni</span>
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-on-surface">Kata <span
+                        class="text-primary-container">Pelanggan</span> Kami</h2>
+                <p class="font-body text-on-surface-variant mt-3 max-w-xl mx-auto">Ulasan asli dari pelanggan AN Petshop
+                    di Google Maps</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Review 1 -->
+                <div class="bg-surface-container-lowest rounded-3xl p-8 card-hover fade-up">
+                    <div class="flex items-center gap-1 mb-4">
+                        <span class="star-gold text-lg">★★★★★</span>
+                    </div>
+                    <p class="font-body text-on-surface-variant leading-relaxed text-sm mb-6">
+                        "Pelayanannya ramah, tempatnya enak, produknya lengkap, tersedia pembayaran menggunakan debit,
+                        lahan parkir cukup, gud job :)"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 gradient-primary rounded-full flex items-center justify-center text-white font-heading font-bold text-sm">
+                            A</div>
+                        <div>
+                            <p class="font-heading font-semibold text-sm text-on-surface">Arifin Cesar Priyoga</p>
+                            <p class="font-body text-xs text-on-surface-variant">Pelanggan Google Maps</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="bg-surface-container-lowest rounded-3xl p-8 card-hover fade-up"
+                    style="transition-delay:0.1s">
+                    <div class="flex items-center gap-1 mb-4">
+                        <span class="star-gold text-lg">★★★★★</span>
+                    </div>
+                    <p class="font-body text-on-surface-variant leading-relaxed text-sm mb-6">
+                        "Komplit! Buka dari jam 8.00-21.00, paling lama diantara petshop yang lain, tanggal merah dan
+                        hari raya pun selalu buka 👍🏻"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 bg-secondary-container rounded-full flex items-center justify-center text-on-surface font-heading font-bold text-sm">
+                            T</div>
+                        <div>
+                            <p class="font-heading font-semibold text-sm text-on-surface">Tria Pertiwi</p>
+                            <p class="font-body text-xs text-on-surface-variant">Pelanggan Google Maps</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="bg-surface-container-lowest rounded-3xl p-8 card-hover fade-up"
+                    style="transition-delay:0.2s">
+                    <div class="flex items-center gap-1 mb-4">
+                        <span class="star-gold text-lg">★★★★★</span>
+                    </div>
+                    <p class="font-body text-on-surface-variant leading-relaxed text-sm mb-6">
+                        "Ayo yang mau mudik dan bingung nggak ada yang urusin anabul-nya, jangan bingung! Di AN Petshop
+                        Bogor ada pet hotel-nya. Makanan dry food-nya juga ditanggung. Pelayanan ramah dan kasir sopan
+                        santun terhadap setiap customer 😊"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-heading font-bold text-sm">
+                            B</div>
+                        <div>
+                            <p class="font-heading font-semibold text-sm text-on-surface">Bui Cung</p>
+                            <p class="font-body text-xs text-on-surface-variant">Local Guide · Google Maps</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact -->
+    <section id="kontak" class="py-20 md:py-28 bg-surface-container">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <span
+                    class="inline-block bg-secondary-fixed text-secondary px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-4">Lokasi
+                    & Kontak</span>
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-on-surface">Kunjungi <span
+                        class="text-primary-container">AN Petshop</span></h2>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 fade-up">
+                <div class="bg-surface-container-lowest rounded-3xl p-8 md:p-10">
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center text-white text-xl flex-shrink-0">
+                                📍</div>
+                            <div>
+                                <h3 class="font-heading font-bold text-base text-on-surface mb-1">Alamat</h3>
+                                <p class="font-body text-sm text-on-surface-variant leading-relaxed">Jl. Pahlawan
+                                    No.25A, RT.03/RW.11, Empang, Kec. Bogor Sel., Kota Bogor, Jawa Barat 16132</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-secondary-fixed rounded-xl flex items-center justify-center text-xl flex-shrink-0">
+                                📞</div>
+                            <div>
+                                <h3 class="font-heading font-bold text-base text-on-surface mb-1">Telepon</h3>
+                                <a href="tel:+6289622026777"
+                                    class="font-body text-sm text-primary-container font-semibold hover:underline">0896-2202-6777</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-secondary-fixed rounded-xl flex items-center justify-center text-xl flex-shrink-0">
+                                🕐</div>
+                            <div>
+                                <h3 class="font-heading font-bold text-base text-on-surface mb-1">Jam Operasional</h3>
+                                <p class="font-body text-sm text-on-surface-variant">Setiap Hari (Senin - Minggu)</p>
+                                <p class="font-body text-sm font-semibold text-primary-container">08.00 - 22.00 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                        <a href="https://maps.app.goo.gl/pEZ6sKJvnC2xEgqs5" target="_blank"
+                            class="btn-primary text-white px-6 py-3.5 rounded-full text-sm font-semibold font-body text-center inline-flex items-center justify-center gap-2">
+                            📍 Buka di Google Maps
+                        </a>
+                        <a href="https://wa.me/6289622026777" target="_blank"
+                            class="btn-accent px-6 py-3.5 rounded-full text-sm font-semibold font-body text-center inline-flex items-center justify-center gap-2">
+                            💬 Chat WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="rounded-3xl overflow-hidden shadow-lg min-h-[350px]">
+                    <iframe title="Lokasi AN Petshop di Google Maps"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.2!2d106.79!3d-6.61!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5d19c4b7b0d%3A0x0!2sAN+Petshop!5e0!3m2!1sid!2sid!4v1700000000000"
+                        width="100%" height="100%" style="border:0; min-height:350px;" allowfullscreen loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-16 md:py-20 gradient-hero relative overflow-hidden">
+        <div class="absolute top-5 left-10 text-5xl opacity-20 paw-float select-none">🐾</div>
+        <div class="absolute bottom-5 right-10 text-4xl opacity-15 paw-float select-none" style="animation-delay:-3s">🐾
+        </div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="font-heading font-bold text-3xl md:text-4xl text-white mb-4">Siap Merawat Hewan Kesayangan Anda?
+            </h2>
+            <p class="font-body text-white/80 text-lg mb-8 max-w-2xl mx-auto">Kunjungi AN Petshop sekarang dan temukan
+                semua kebutuhan hewan peliharaan Anda dengan harga terjangkau.</p>
+            <a href="https://wa.me/6289622026777" target="_blank"
+                class="btn-accent px-10 py-4 rounded-full text-base font-bold font-body inline-flex items-center gap-2">
+                🐾 Hubungi Kami Sekarang
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-on-surface py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">🐾</span>
+                    <span class="font-heading font-bold text-lg text-white">AN Petshop</span>
+                </div>
+                <div class="text-center">
+                    <p class="font-body text-sm text-white/50">© 2024 AN Petshop. Hak cipta dilindungi.</p>
+                    <p class="font-body text-xs text-white/30 mt-1">Website Demo oleh <span
+                            class="text-accent font-semibold">Digitalin</span> — Pembuatan Website Profesional</p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://wa.me/6289622026777" target="_blank"
+                        class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white/70 hover:bg-primary-container hover:text-white transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        </svg>
+                    </a>
+                    <a href="https://maps.app.goo.gl/pEZ6sKJvnC2xEgqs5" target="_blank"
+                        class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white/70 hover:bg-primary-container hover:text-white transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Button (fixed) -->
+    <button id="mobileMenuBtn"
+        class="md:hidden fixed bottom-6 right-6 w-14 h-14 gradient-primary rounded-full shadow-lg flex items-center justify-center text-white z-50"
+        onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+    </button>
+    <div id="mobileMenu"
+        class="hidden fixed inset-0 bg-surface/95 backdrop-blur-lg z-40 flex flex-col items-center justify-center gap-8 md:hidden">
+        <a href="#beranda" class="font-heading font-bold text-2xl text-on-surface"
+            onclick="document.getElementById('mobileMenu').classList.add('hidden')">Beranda</a>
+        <a href="#layanan" class="font-heading font-bold text-2xl text-on-surface"
+            onclick="document.getElementById('mobileMenu').classList.add('hidden')">Layanan</a>
+        <a href="#testimoni" class="font-heading font-bold text-2xl text-on-surface"
+            onclick="document.getElementById('mobileMenu').classList.add('hidden')">Testimoni</a>
+        <a href="#kontak" class="font-heading font-bold text-2xl text-on-surface"
+            onclick="document.getElementById('mobileMenu').classList.add('hidden')">Kontak</a>
+        <a href="https://wa.me/6289622026777" target="_blank"
+            class="btn-primary text-white px-8 py-3 rounded-full text-lg font-semibold">Hubungi Kami</a>
+    </div>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
